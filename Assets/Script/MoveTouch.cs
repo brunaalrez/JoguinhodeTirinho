@@ -17,6 +17,14 @@ public class MoveTouch : MonoBehaviour
             horizontal = (Screen.width / 2 < posicaoX) ? -1 : 1;
 
         }
+        if (transform.position.x >= 3.5f)
+        {
+            transform.position = new Vector3(3.5f, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x <= -3.5f)
+        {
+            transform.position = new Vector3(-3.5f, transform.position.y, transform.position.z);
+        }
         Vector3 movimento = new Vector3(horizontal, 0, 0);
         movimento = movimento * speed * Time.deltaTime;
 

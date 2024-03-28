@@ -8,9 +8,8 @@ public class ControllerMov : MonoBehaviour
     Transform jogador;
 
     float horizontal;
-    public float limiteEsquerdo = 3.13f;
-    public float limiteDireito = -3.41f;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         jogador = GameObject.FindWithTag("Player").transform;
@@ -31,10 +30,19 @@ public class ControllerMov : MonoBehaviour
         {
             horizontal = 0;
         }
+
+        if (transform.position.x >= 3.5f )
+        {
+            transform.position = new Vector3(3.5f, transform.position.y, transform.position.z);
+        }else if (transform.position.x <= -3.5f)
+        {
+            transform.position = new Vector3(-3.5f, transform.position.y, transform.position.z);
+        }
+
         Vector3 movimento = new Vector3(horizontal, 0, 0);
         movimento = movimento * velocidade * Time.deltaTime;
-
         jogador.transform.Translate(movimento);
+
 
     }
 }
