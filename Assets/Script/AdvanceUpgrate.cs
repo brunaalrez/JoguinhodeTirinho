@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkEnemy : MonoBehaviour
+public class AdvanceUpgrate : MonoBehaviour
 {
-    public float speed = 50.0f;
-    public int vida = 3;
+    public float speed = 5f;
+    public int vida = 7;
 
     void Update()
     {

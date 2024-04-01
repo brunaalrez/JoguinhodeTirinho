@@ -6,7 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 5f;
     public float tempoVida = 3.0f;
- 
+    public WalkEnemy WalkEnemy;
+    public AdvanceUpgrate AdvanceUpgrate;
 
     void Start()
     {
@@ -27,7 +28,11 @@ public class Bullet : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy") 
         {
-            Destroy(other.gameObject);
+            other.transform.GetComponent<WalkEnemy>().verificarMorte();
+        }
+        else if(other.gameObject.tag == "Upgrade")
+        {
+            other.transform.GetComponent<AdvanceUpgrate>().verificarMorte();
         }
     }
 }
