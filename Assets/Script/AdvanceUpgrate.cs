@@ -5,7 +5,7 @@ using UnityEngine;
 public class AdvanceUpgrate : MonoBehaviour
 {
     public float speed = 5f;
-    public int vida = 7;
+    public int tempo = 7;
 
     void Update()
     {
@@ -14,10 +14,12 @@ public class AdvanceUpgrate : MonoBehaviour
 
     public void verificarMorte()
     {
-        vida--;
-        if (vida <= 0)
+        tempo--;
+        if (tempo <= 0)
         {
+            PlayerShooter.intervaloTiro -= 0.2f;
             Destroy(gameObject);
         }
     }
+
 }

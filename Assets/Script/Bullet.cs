@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(0, 0, -(speed * Time.deltaTime));
+        
     }
 
     void DestruirBala()

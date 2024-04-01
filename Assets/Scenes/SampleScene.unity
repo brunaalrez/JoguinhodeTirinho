@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBulled: {fileID: 8591635812291358702, guid: 5ff3bb4c2ef00044e8dcf52d8fca2b7f, type: 3}
   containerTiro: {fileID: 887567483}
-  intervaloTiro: 0.5
+  forca: 600
 --- !u!54 &181401155
 Rigidbody:
   m_ObjectHideFlags: 0
