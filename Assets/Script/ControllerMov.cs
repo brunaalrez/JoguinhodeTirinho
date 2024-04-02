@@ -6,6 +6,7 @@ public class ControllerMov : MonoBehaviour
 {
     float velocidade = 5f;
     Transform jogador;
+    public static int vidaPlayer = 1;
 
     float horizontal;
 
@@ -42,7 +43,13 @@ public class ControllerMov : MonoBehaviour
         Vector3 movimento = new Vector3(horizontal, 0, 0);
         movimento = movimento * velocidade * Time.deltaTime;
         jogador.transform.Translate(movimento);
-
-
+    }
+    public void lifePlayer()
+    {
+        vidaPlayer--;
+        if(vidaPlayer == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

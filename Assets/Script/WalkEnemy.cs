@@ -20,4 +20,12 @@ public class WalkEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
+

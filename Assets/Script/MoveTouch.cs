@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveTouch : MonoBehaviour
 {
     float speed = 5f;
+    public int vidaPlayer = 1;
 
     void Update()
     {
